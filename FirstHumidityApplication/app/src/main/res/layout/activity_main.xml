@@ -96,36 +96,27 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/textView8"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:paddingLeft="5dp"
-                    android:text="Fan"
-                    android:textSize="24sp"
-                    android:textStyle="bold" />
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
 
-                    <Button
-                        android:id="@+id/button18"
-                        android:layout_width="wrap_content"
+                    <TextView
+                        android:id="@+id/textView8"
+                        android:layout_width="100dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="ON"
-                        android:textSize="20sp"
+                        android:text="Fan"
+                        android:textAlignment="center"
+                        android:textSize="24sp"
                         android:textStyle="bold" />
 
                     <Button
-                        android:id="@+id/button19"
-                        android:layout_width="wrap_content"
+                        android:id="@+id/btnFanStatus"
+                        android:layout_width="1dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="OFF"
-                        android:textSize="20sp"
+                        android:text="ON"
+                        android:textSize="16sp"
                         android:textStyle="bold" />
 
                     <ImageView
@@ -135,43 +126,27 @@
                         android:layout_weight="1"
                         tools:srcCompat="@tools:sample/avatars" />
                 </LinearLayout>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/textView9"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:paddingLeft="5dp"
-                    android:text="Mist"
-                    android:textSize="24sp"
-                    android:textStyle="bold" />
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
 
-                    <Button
-                        android:id="@+id/button20"
-                        android:layout_width="wrap_content"
+                    <TextView
+                        android:id="@+id/textView9"
+                        android:layout_width="100dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="ON"
-                        android:textSize="20sp"
+                        android:text="Mist"
+                        android:textAlignment="center"
+                        android:textSize="24sp"
                         android:textStyle="bold" />
 
                     <Button
-                        android:id="@+id/button21"
-                        android:layout_width="wrap_content"
+                        android:id="@+id/btnMistStatus"
+                        android:layout_width="1dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="OFF"
-                        android:textSize="20sp"
+                        android:text="ON"
+                        android:textSize="16sp"
                         android:textStyle="bold" />
 
                     <ImageView
@@ -182,43 +157,27 @@
                         tools:srcCompat="@tools:sample/avatars" />
 
                 </LinearLayout>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/textView10"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:paddingLeft="5dp"
-                    android:text="LED"
-                    android:textSize="24sp"
-                    android:textStyle="bold" />
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
 
-                    <Button
-                        android:id="@+id/button22"
-                        android:layout_width="wrap_content"
+                    <TextView
+                        android:id="@+id/textView10"
+                        android:layout_width="100dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="ON"
-                        android:textSize="20sp"
+                        android:text="LED"
+                        android:textAlignment="center"
+                        android:textSize="24sp"
                         android:textStyle="bold" />
 
                     <Button
-                        android:id="@+id/button23"
-                        android:layout_width="wrap_content"
+                        android:id="@+id/btnLedStatus"
+                        android:layout_width="1dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="OFF"
-                        android:textSize="20sp"
+                        android:text="ON"
+                        android:textSize="16sp"
                         android:textStyle="bold" />
 
                     <ImageView

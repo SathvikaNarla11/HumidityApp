@@ -23,7 +23,7 @@ import com.example.firsthumidityapplication.ScanBluetoothActivity;
 
 public class MainActivity extends AppCompatActivity {
     Toolbar toolbar;
-    Button scanBtn, automaticBtn, manualBtn;
+    Button scanBtn, automaticBtn, manualBtn, fanStatusBtn, mistStatusBtn, ledStatusBtn;
     TextView tvTemp, tvHum;
     BluetoothAdapter myBluetoothAdapter;
     @Override
@@ -38,12 +38,21 @@ public class MainActivity extends AppCompatActivity {
         scanBtn = findViewById(R.id.scanBtn);
         automaticBtn = findViewById(R.id.btnAutomatic);
         manualBtn = findViewById(R.id.btnManual);
+
+        fanStatusBtn = findViewById(R.id.btnFanStatus);
+        mistStatusBtn = findViewById(R.id.btnMistStatus);
+        ledStatusBtn = findViewById(R.id.btnLedStatus);
+
         tvTemp = findViewById(R.id.tvTemperature);
         tvHum = findViewById(R.id.tvHumidity);
         myBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
 
         manualBtn.setEnabled(false);
         automaticBtn.setEnabled(false);
+
+        fanStatusBtn.setEnabled(false);
+        mistStatusBtn.setEnabled(false);
+        ledStatusBtn.setEnabled(false);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -100,30 +109,41 @@ public class MainActivity extends AppCompatActivity {
                         manualBtn.setEnabled(!isAutoMode);
 
                         // Find ImageView
-                        ImageView fanImageView = findViewById(R.id.imageFan);
-                        // Set image based on fanStatus
-                        if (fanStatus) {
-                            fanImageView.setImageResource(R.drawable.led_on);
-                        } else {
-                            fanImageView.setImageResource(R.drawable.led_off);
-                        }
-
+                        ImageView fanImage = findViewById(R.id.imageFan);
                         ImageView mistImage = findViewById(R.id.imageMist);
-                        if(mistStatus)
-                        {
-                            mistImage.setImageResource(R.drawable.led_on);
-                        }
-                        else {
-                            mistImage.setImageResource(R.drawable.led_off);
-                        }
-
                         ImageView ledImage = findViewById(R.id.imageLed);
-                        if(ledStatus)
+
+                        // Set image based on fanStatus
+                        if(isAutoMode)
                         {
-                            ledImage.setImageResource(R.drawable.led_on);
-                        }
-                        else {
-                            ledImage.setImageResource(R.drawable.led_off);
+                            if (fanStatus) {
+
+                                fanImage.setImageResource(R.drawable.led_on);
+                                fanStatusBtn.setText("ON");
+                            } else {
+                                fanImage.setImageResource(R.drawable.led_off);
+                                fanStatusBtn.setText("OFF");
+                            }
+
+                            if(mistStatus)
+                            {
+                                mistImage.setImageResource(R.drawable.led_on);
+                                mistStatusBtn.setText("ON");
+                            }
+                            else {
+                                mistImage.setImageResource(R.drawable.led_off);
+                                mistStatusBtn.setText("OFF");
+                            }
+
+                            if(ledStatus)
+                            {
+                                ledImage.setImageResource(R.drawable.led_on);
+                                ledStatusBtn.setText("ON");
+                            }
+                            else {
+                                ledImage.setImageResource(R.drawable.led_off);
+                                ledStatusBtn.setText("OFF");
+                            }
                         }
                     }
                 });
