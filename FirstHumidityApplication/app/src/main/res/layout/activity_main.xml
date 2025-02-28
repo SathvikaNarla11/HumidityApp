@@ -12,28 +12,33 @@
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="4dp"
         android:background="@android:color/holo_blue_dark"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:title="Auto Mist Control V1.0"
         app:titleTextColor="@android:color/white"
-        android:visibility="visible"
         tools:visibility="visible" />
 
     <LinearLayout
-        android:layout_width="398dp"
-        android:layout_height="659dp"
-        android:layout_marginTop="10dp"
+        android:layout_width="370dp"
+        android:layout_height="623dp"
         android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/toolbar">
 
         <LinearLayout
-            android:layout_width="372dp"
-            android:layout_height="80dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:layout_marginRight="20dp"
             android:layout_marginBottom="10dp"
             android:orientation="vertical">
@@ -44,32 +49,33 @@
                 android:layout_height="match_parent"
                 android:backgroundTintMode="add"
                 android:text="SCAN AND CONNECT"
-                android:textSize="30sp"
+                android:textSize="16sp"
                 android:textStyle="bold" />
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="367dp"
-            android:layout_height="58dp"
+            android:layout_width="329dp"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
             android:layout_marginBottom="20dp"
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/button16"
+                android:id="@+id/btnAutomatic"
                 android:layout_width="183dp"
                 android:layout_height="match_parent"
-                android:layout_marginRight="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:text="Automatic"
                 android:textSize="20sp" />
 
             <Button
-                android:id="@+id/button17"
-                android:layout_width="183dp"
+                android:id="@+id/btnManual"
+                android:layout_width="157dp"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:layout_weight="1"
                 android:text="Manual"
                 android:textSize="20sp" />
@@ -121,6 +127,13 @@
                         android:text="OFF"
                         android:textSize="20sp"
                         android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/imageFan"
+                        android:layout_width="3dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        tools:srcCompat="@tools:sample/avatars" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -160,6 +173,14 @@
                         android:text="OFF"
                         android:textSize="20sp"
                         android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/imageMist"
+                        android:layout_width="3dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        tools:srcCompat="@tools:sample/avatars" />
+
                 </LinearLayout>
             </LinearLayout>
 
@@ -199,6 +220,13 @@
                         android:text="OFF"
                         android:textSize="20sp"
                         android:textStyle="bold" />
+
+                    <ImageView
+                        android:id="@+id/imageLed"
+                        android:layout_width="3dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        tools:srcCompat="@tools:sample/avatars" />
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
@@ -215,32 +243,32 @@
                 android:id="@+id/textView4"
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
+                android:layout_marginBottom="15dp"
                 android:text="Received Data"
                 android:textAlignment="center"
                 android:textSize="30sp"
                 android:textStyle="bold" />
 
             <LinearLayout
-                android:layout_width="356dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="92dp"
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/textView5"
+                    android:id="@+id/tvTemperature"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Temperature : "
-                    android:textSize="24sp" />
+                    android:layout_marginBottom="5dp"
+                    android:text="TEMPERATURE : "
+                    android:textAllCaps="true"
+                    android:textSize="20sp" />
 
                 <TextView
-                    android:id="@+id/textView6"
+                    android:id="@+id/tvHumidity"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:text="Humidity : "
-                    android:textSize="24sp" />
+                    android:text="HUMIDITY          : "
+                    android:textSize="20sp" />
             </LinearLayout>
         </LinearLayout>
 
